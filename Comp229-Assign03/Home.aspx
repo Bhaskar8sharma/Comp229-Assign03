@@ -1,54 +1,43 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Comp229_Assign03.Home" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Comp229_Assign03.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <div class="jumbotron">
-        <asp:Repeater ID="myRepeater" runat="server" OnItemCommand="myRepeater_ItemCommand">
+    <div>
+        <asp:Repeater ID="myRepeater" runat="server">
             <HeaderTemplate>
                 <table class="table1">
                     <thead>
                         <tr>
-                            <th>
-                                First name:<br />
-                            </th><br />
-                            <th>
-                                Last name:
-                            </th><br />
-                            <th>
-                                Student ID
-                            </th>
-                            <th>
-                                EnrollmentDate
-                            </th>
-                        </tr>
-                    </thead>
-                </table>
+                            <th>First name &nbsp</th>
+                            <th>Last name &nbsp</th>
+                            <th> Student ID &nbsp</th>
+                            <th>Enrollment Date &nbsp</th>
             </HeaderTemplate>
             <ItemTemplate>
-                <tbody>
+     
                     <tr>
-                        <td>
-                            <%# Eval("FirstMidName") %>
+                        <td><br />
+                            <%# Eval("FirstMidName") %><br />
                         </td>
-                        <td>
-                            <%# Eval("LastName") %>
+                        <td><br />
+                            <%# Eval("LastName") %><br />
                         </td>
-                        <td>
-                            <%# Eval("StudentID") %>
+                        <td><br />
+                            <%# Eval("StudentID") %><br />
                         </td>
-                        <td>
-                            <%# Eval("EnrollmentDate") %>
+                        <td><br />
+                            <%# Eval("EnrollmentDate") %><br />
                         </td>
-                        <%--<asp:Button ID="SendButton" CssClass="btn btn-primary btn-lg" runat="server" Text="Send" OnClick="SendButton_Click" />--%>
-<a href="Student.aspx" class="btn btn-success btn-sm">
+                        
+
                     </tr>
                 </tbody>
             </ItemTemplate>
             <FooterTemplate>
+                <asp:Button ID="Button1" runat="server" Text="Add Student" OnClick="Page_Load" PostBackUrl="~/Student.aspx" />
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-    </div>
+</div>
     <%--<div class="table2">
         <table>
             <tr>
