@@ -9,65 +9,36 @@
                         <tr>
                             <th>First name &nbsp</th>
                             <th>Last name &nbsp</th>
-                            <th> Student ID &nbsp</th>
-                            <th>Enrollment Date &nbsp</th>
+                         
             </HeaderTemplate>
             <ItemTemplate>
      
                     <tr>
                         <td><br />
-                            <%# Eval("FirstMidName") %><br />
+                           <asp:HyperLink NavigateUrl="~/Student.aspx" ID="Hyperlink1" runat="server"><%# Eval("FirstMidName") %><br /></asp:HyperLink>
                         </td>
                         <td><br />
-                            <%# Eval("LastName") %><br />
+                          <asp:HyperLink NavigateUrl="~/Student.aspx" ID="Hyperlink2" runat="server"><%# Eval("LastName") %><br /></asp:HyperLink>
                         </td>
-                        <td><br />
-                            <%# Eval("StudentID") %><br />
+                       
+                               <td><br />&nbsp&nbsp&nbsp<asp:LinkButton ID="detailsButton" runat="server"
+                Text='<%#"View more details about " + Eval("FirstMidName")%>'
+                CommandName="MoreDetails"
+                CommandArgument='<%#Eval("StudentID")  %>'/><br /></td>
+                          <td><br />&nbsp&nbsp<asp:LinkButton id="EditButton" 
+                 Text="Edit" 
+                 CommandName="Edit"
+                 runat="server" NavigateUrl="~/Update.aspx"/>
                         </td>
-                        <td><br />
-                            <%# Eval("EnrollmentDate") %><br />
-                        </td>
-                        
-
                     </tr>
                 </tbody>
             </ItemTemplate>
             <FooterTemplate>
-                <asp:Button ID="Button1" runat="server" Text="Add Student" OnClick="Page_Load" PostBackUrl="~/Student.aspx" />
-                </table>
+               <%-- <asp:Button ID="Button1" runat="server" Text="Add Student" CommandName="addStudent" OnClick="addStudent_Click" />
+              --%>              </table>
             </FooterTemplate>
         </asp:Repeater>
 </div>
-    <%--<div class="table2">
-        <table>
-            <tr>
-            <td>
-                <asp:Label ID="addStudentId" Text="Add new student: " runat="server" />
-            </td>
-            <td>
-                <asp:TextBox ID="addStudentFname" Text="First Name" runat="server" />
-                <asp:RequiredFieldValidator ID="FnameReqFieldValidator" runat="server" 
-                    ControlToValidate="addStudentFname" ErrorMessage="!" required="true" />
-            </td>
-                <td><asp:TextBox ID="addStudentLname" Text="Last Name" runat="server"/>
-            <asp:RequiredFieldValidator ID="LnameReqFieldValidator"
-                                        runat="server"
-                                        ControlToValidate="addStudentLname"
-                                        ErrorMessage="!" 
-                                        required="true"/>
-                </td>
-            <td><asp:Button ID="addStudentButton" 
-                            Text="Add"
-                            runat="server" 
-                            Enabled="true" 
-                            OnClick="addStudentButton_Click"/></td>
-
-            <td><asp:Label  ID="addButtonClickedLabel" 
-                            Text="" 
-                            runat="server"
-                            Visible="false" /></td>   
-                </tr>       
-        </table>
-    </div>--%>
+   
 
 </asp:Content>

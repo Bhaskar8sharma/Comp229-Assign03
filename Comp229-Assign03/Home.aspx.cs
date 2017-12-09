@@ -13,6 +13,7 @@ namespace Comp229_Assign03
 
         private SqlConnection conn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Comp229Assign03;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         public void Page_Load(object sender, EventArgs e)
+        
         {
             SqlConnection conn;
             SqlCommand comm;
@@ -29,6 +30,7 @@ namespace Comp229_Assign03
                 myRepeater.DataSource = reader;
                 myRepeater.DataBind();
                 reader.Close();
+         
             }
             catch
             {

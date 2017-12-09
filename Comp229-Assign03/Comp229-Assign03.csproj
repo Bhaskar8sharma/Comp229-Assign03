@@ -146,6 +146,7 @@
     <Content Include="Course.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Update.aspx" />
+    <Content Include="AddStudent.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -243,6 +244,13 @@
     </Compile>
     <Compile Include="Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudent.aspx.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddStudent.aspx.designer.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
