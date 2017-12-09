@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div>
     <fieldset>
-        <legend>Student Enrolled In The Course </legend>
+        <legend style="color: #FF9933">Student Enrolled In The Course </legend>
         <table>
                 <thead>
                     <tr>
@@ -42,21 +42,21 @@
                 </div>
                 <div>
                 <asp:Label for = "FirstName" runat="server" Text="First Name: " AutoPostBack="True"/>
-                   <asp:TextBox ID = "FirstName" runat="server"></asp:TextBox>
+                   <asp:TextBox ID = "FirstName" runat="server" style="margin-left: 4px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID = "FirstNameRequiredVal" runat="server" ErrorMessage="Empty!" ValidationGroup="InsertValidation" ControlToValidate="FirstName" ForeColor="Red"></asp:RequiredFieldValidator>
                   </div>
                   <div>
                 <asp:Label for ="LastName" runat="server" Text="Last Name: " AutoPostBack="True"/>
-                   <asp:TextBox ID = "LastName" runat="server"></asp:TextBox>
+                   <asp:TextBox ID = "LastName" runat="server" style="margin-left: 5px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID = "LastNameRequiredVal" runat="server" ErrorMessage="Empty!" ValidationGroup="InsertValidation" ControlToValidate="LastName" ForeColor="Red"></asp:RequiredFieldValidator>
                   </div>
          <div>
                 <asp:Label ID = "GradeValue" runat="server" Text="Grade: " AutoPostBack="True"/>
-                   <asp:TextBox ID = "grade" runat="server"></asp:TextBox>
+                   <asp:TextBox ID = "grade" runat="server" style="margin-left: 33px" Width="145px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID = "gradeRequiredVal" runat="server" ErrorMessage="Empty!" ValidationGroup="InsertValidation" ControlToValidate="grade" ForeColor="Red"></asp:RequiredFieldValidator>
                   </div>
                 <div>
-                        <asp:Button ID = "btnEnroll" runat="server" Text="Enroll Student"  ValidationGroup="InsertValidation" OnClick="btn_Enroll_click" />
+                        <asp:Button ID = "btnEnroll" runat="server" Text="Enroll Student"  ValidationGroup="InsertValidation" OnClick="btn_Enroll_click" ForeColor="#FF9933" />
 
                     </div>
                     <div>

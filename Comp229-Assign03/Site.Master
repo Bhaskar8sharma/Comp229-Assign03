@@ -11,12 +11,11 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
 </head>
 <body>
+    <asp:Image ID="Image1" runat="server" Height="69px" Width="339px" img="Assets/logo.jpg" />
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>

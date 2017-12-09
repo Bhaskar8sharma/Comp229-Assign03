@@ -1,31 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Update.aspx.cs" Inherits="Comp229_Assign03.Update" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<h1>Welcome to Update page</h1><br />
+    <h1 style="text-decoration: underline; border-style: groove; border-width: thick; background-image: none; background-repeat: no-repeat; background-attachment: fixed; background-color: #FFFFFF; color: #FF9933;">Welcome to Update page</h1><br />
     <div id="addStudent">
         <table>
             <tr>
                 <td>First Name:</td>
                 <td>
-                    <asp:TextBox ID="Fname" runat="server"></asp:TextBox><br />
+                    <asp:TextBox ID="Fname" runat="server" Width="165px"></asp:TextBox><br />
                 </td>
             </tr>
 
             <tr>
                 <td>Last Name:</td>
                 <td>
-                    <asp:TextBox ID="Lname" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="Lname" runat="server" Width="165px"></asp:TextBox>
                 </td>
             </tr>
                 <tr>
                     <td> Student ID:</td>
                     <td>
-                        <asp:TextBox ID="studentID" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="studentID" runat="server" Width="165px"></asp:TextBox>
                     </td>
                 </tr>
             <tr>
                 <td>Enrollment Date:</td>
                 <td>
-                    <asp:TextBox ID="EnrDate" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="EnrDate" runat="server" Width="166px"></asp:TextBox>
                 </td>
             </tr>
         </table>
