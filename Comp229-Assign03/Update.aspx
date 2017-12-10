@@ -7,6 +7,7 @@
                 <td>First Name:</td>
                 <td>
                     <asp:TextBox ID="Fname" runat="server" Width="165px"></asp:TextBox><br />
+                    <br />
                 </td>
             </tr>
 
@@ -14,23 +15,28 @@
                 <td>Last Name:</td>
                 <td>
                     <asp:TextBox ID="Lname" runat="server" Width="165px"></asp:TextBox>
+                    <br />
                 </td>
             </tr>
                 <tr>
                     <td> Student ID:</td>
                     <td>
+                        <br />
                         <asp:TextBox ID="studentID" runat="server" Width="165px"></asp:TextBox>
+                        <br />
                     </td>
                 </tr>
             <tr>
                 <td>Enrollment Date:</td>
                 <td>
                     <asp:TextBox ID="EnrDate" runat="server" Width="166px"></asp:TextBox>
+                    <br />
                 </td>
             </tr>
         </table>
 
         <asp:Button ID="btnCancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnUpdate" Text="Update" runat="server" OnClick="btnUpdate_Click" />
         <br />
         <br />

@@ -15,7 +15,9 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
-    <asp:Image ID="Image1" runat="server" Height="69px" Width="339px" img="Assets/logo.jpg" />
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css"/>.
+   <div class="hero-image">  
+  </div>
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>

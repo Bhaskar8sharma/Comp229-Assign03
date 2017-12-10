@@ -4,16 +4,7 @@
     <fieldset>
         <legend style="color: #FF9933">Student Enrolled In The Course </legend>
         <table>
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Student ID</th>
-                        <th>Enrollment Date</th>
-                        <th>Grade</th>
-                        <th></th>
-                    </tr>
-                </thead>
+                
              <tbody>
                     <asp:Repeater ID = "StudentInfo" runat="server" OnItemCommand="StudentInfo_ItemCommand">
                         <ItemTemplate>
@@ -22,9 +13,9 @@
                                 <td>
                                     <asp:Label ID="StudentID" runat = "server" Text='<%# Eval("StudentID") %>' /></td>
                                 <td>
-                                    <asp:Label ID="firstName" runat = "server" Text='<%# Eval("FirstMidName") %>' /></td>
+                                    <asp:Label ID="FirstName" runat = "server" Text='<%# Eval("FirstMidName") %>' /></td>
                                 <td>
-                                    <asp:Label ID="lastName" runat = "server" Text='<%# Eval("LastName") %>' /></td>
+                                    <asp:Label ID="LastName" runat = "server" Text='<%# Eval("LastName") %>' /></td>
                                 <td>
                                     <asp:Label ID="enrollmentDate" runat = "server" Text='<%# Eval("EnrollmentDate") %>' /></td>
                                 <td>
@@ -37,18 +28,21 @@
                 </tbody>
             </table>
          <h3> Enroll Student</h3>
+        <p> &nbsp;</p>
                 <div>
-                    You can enroll a new student only to this course.
-                </div>
+                    You can enroll a new student only to this course.<br />
+&nbsp;</div>
                 <div>
                 <asp:Label for = "FirstName" runat="server" Text="First Name: " AutoPostBack="True"/>
                    <asp:TextBox ID = "FirstName" runat="server" style="margin-left: 4px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID = "FirstNameRequiredVal" runat="server" ErrorMessage="Empty!" ValidationGroup="InsertValidation" ControlToValidate="FirstName" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
                   </div>
                   <div>
                 <asp:Label for ="LastName" runat="server" Text="Last Name: " AutoPostBack="True"/>
                    <asp:TextBox ID = "LastName" runat="server" style="margin-left: 5px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID = "LastNameRequiredVal" runat="server" ErrorMessage="Empty!" ValidationGroup="InsertValidation" ControlToValidate="LastName" ForeColor="Red"></asp:RequiredFieldValidator>
+                      <br />
                   </div>
          <div>
                 <asp:Label ID = "GradeValue" runat="server" Text="Grade: " AutoPostBack="True"/>
